@@ -1,24 +1,21 @@
 #pragma once
 #include <iostream>
 #include "Animal.h"
+using namespace std; 
 
 class Cats :public Animal
 {
-
-	string name; 
-	int age, weigt; 
+private:
+	string cats_toy; 
 
 public:
-	Cats(string n,int a, int w  )
+	Cats(string ct )
 	{
-	}
-		void set_name(string n )
-	{
-		this->name = n;
-
-		}; 
-		Cats() {}; 
-		~Cats() {}; 
+		this->cats_toy = ct; 
+	};
+		 
+	Cats() { cout << "konstruktor domyslny cat" << endl; };
+	~Cats() { cout << "destruktor domyslny cat" << endl; };
 
 
 	void make_sound()
