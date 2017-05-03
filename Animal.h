@@ -4,15 +4,16 @@ using namespace std;
 class Animal
 {
 
-private:
+public:
 	string name;
-	int age, weight;
+	int age; 
+	int weight;
 
 public:
 	virtual void make_sound() {cout << "no sound"<<endl; };
 	Animal() { cout << "konstruktor domyslny animal" << endl;  };
 	Animal(string n, int a, int w); 
-	~Animal()
+	virtual ~Animal()
 	{
 		cout << "destruktor domyslny  animal" << endl;
 	};
