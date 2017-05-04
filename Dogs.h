@@ -15,6 +15,9 @@ public:
 	}
 	Dogs(const Dogs& original)
 	{
+		name = original.name;
+		age = original.age;
+		weight = original.weight;
 		dogs_toy = original.dogs_toy;
 		my_owner = new Owner(*(original.my_owner));
 		cout << "konstruktor kopiujacy" << endl;

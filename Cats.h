@@ -9,18 +9,22 @@ class Cats :public Animal
 public:
 	string cats_toy; 
 	Owner* my_owner; 
-
+	int* legs;
 
 public:
-	Cats(string ct, string n, int a, int w, string no,string so, int ao):Animal( n, a, w), cats_toy(ct)
+	Cats(string ct, string n, int a, int w, string no, string so, int ao) :Animal(n, a, w), cats_toy(ct)
 	{
-		
+		legs = new int[4];
 		my_owner = new Owner(no, so, ao); 
 		cout << "konstruktor Cat" << endl; 
 	}
 		 
 	Cats(const Cats& original) 
 	{
+		name = original.name;
+		age = original.age;
+		weight = original.weight;
+		*legs = *(original.legs);
 		cats_toy = original.cats_toy; 
 		my_owner = new Owner(*original.my_owner);
 
@@ -33,6 +37,7 @@ public:
 		if (my_owner != nullptr)
 		{
 			delete my_owner;
+			delete legs; 
 			my_owner = nullptr;
 		}
 		cout << "destruktor domyslny cat" << endl; 

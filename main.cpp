@@ -4,7 +4,7 @@ using namespace std;
 #include "Dogs.h"
 #include "Animal.h"
 #include <vector>
-
+#include <string>
 int main()
 {
 	Animal my_animal;
@@ -46,11 +46,13 @@ int main()
 	vector<Animal*>::iterator i = v.begin();
 	for (i; i != v.end(); i++)
 	{
-	//	cout<< ((*i)->name) << endl;
+		cout << (*i)->name << endl;
+		cout << (*i)->age << endl;
+		cout << (*i)->weight << endl;
 		(*i)->make_sound();
 
 	}
-	
+	cout << my_cat3.my_owner->surname << endl; 
 
 
 	system("PAUSE");
