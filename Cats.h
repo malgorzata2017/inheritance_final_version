@@ -22,7 +22,8 @@ public:
 	Cats(const Cats& original) 
 	{
 		cats_toy = original.cats_toy; 
-		*my_owner = *(original.my_owner); 
+		my_owner = new Owner(*original.my_owner);
+
 		cout << "konstruktor kopiujacy" << endl;
 	}
 	//TODO assignment operator

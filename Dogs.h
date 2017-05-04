@@ -6,7 +6,7 @@ class Dogs : public Animal{
 	
 public:
 	string dogs_toy; 
-	Owner *my_owner; 
+	Owner *my_owner=nullptr; 
 public:
 	Dogs(string dt, string n, int a, int w, string no, string so, int ao) :Animal(n, a, w), dogs_toy(dt)
 	{
@@ -16,8 +16,7 @@ public:
 	Dogs(const Dogs& original)
 	{
 		dogs_toy = original.dogs_toy;
-
-		*my_owner = *(original.my_owner);
+		my_owner = new Owner(*(original.my_owner));
 		cout << "konstruktor kopiujacy" << endl;
 	}
 	Dogs() { cout << "konstruktor domyslny dog" << endl; };

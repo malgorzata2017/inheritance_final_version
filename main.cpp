@@ -46,8 +46,7 @@ int main()
 	vector<Animal*>::iterator i = v.begin();
 	for (i; i != v.end(); i++)
 	{
-		string n = ((*i)->name);// << endl;
-		//cout << n<<endl;
+	//	cout<< ((*i)->name) << endl;
 		(*i)->make_sound();
 
 	}
